@@ -5,7 +5,7 @@ from modal import App, Volume, Image
 
 app = modal.App("pricer-service")
 image = Image.debian_slim().pip_install("huggingface", "torch", "transformers", "bitsandbytes", "accelerate", "peft")
-secrets = [modal.Secret.from_name("hf-secret")]
+secrets = [modal.Secret.from_name("huggingface-secret")]
 
 # Constants
 
